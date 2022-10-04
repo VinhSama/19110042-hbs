@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        {{#each body}}
+            <h1>{{this.title}}</h1>
+            <p>Content: {{this.content}}</p>
+        {{/each}}
+        {{#each comments}}
+            <p>+ Comment: {{this.context}}</p>
+        {{/each}}
+        <br><p>Write new comment:</p>
+        {{#each body}}
+        <form action="/index?id={{this.id}}" method="post">
+            <input type="text" id="context" name="context" maxlength="1000" required>
+            <button type="submit">Comment</button><br><br>
+        </form>
+        {{/each}}
+        <form action="/" method="get">
+            <button type='submit'>Up New Post</button><br><br>
+        </form>
+        <form action="/index" method="get">
+            <button type='submit'>Show All Posts</button><br><br>
+        </form>
+    </body>
+</html>

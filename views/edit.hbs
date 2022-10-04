@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h1>Edit Post</h1>
+        <form action="/edit" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" maxlength="100" value="{{context01}}" required>
+            <input type="hidden" id="method" name="method" value="put"><br><br>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" maxlength="5000" value="{{context02}}" required>
+            <input type="hidden" id="id" name="id" value="{{id}}"><br><br>
+            <button type='submit'>Edit</button><br><br>
+        </form>
+        <form action="/" method="get">
+            <button type='submit'>Up New Post</button><br><br>
+        </form>
+        <form action="/index" method="get">
+            <button type='submit'>Show All Posts</button><br><br>
+        </form>
+        {{note}}
+    </body>
+</html>

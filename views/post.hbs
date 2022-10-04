@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h1>Write Post</h1>
+        <form action="/" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" maxlength="100" required><br><br>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" maxlength="5000" required><br><br>
+            <button type='submit'>Up Your Post</button><br><br>
+        </form>
+        <form action="/index" method="get">
+            <button type='submit'>Show All Posts</button><br><br>
+        </form>
+        {{note}}
+    </body>
+</html>
